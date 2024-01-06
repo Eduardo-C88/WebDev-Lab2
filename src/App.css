@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Styles for the Spell Book */
+.spell-book {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.spell-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Styles for the World Map */
+.world-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Adjust the height as desired */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.map-title {
+    margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Increased columns for a larger map */
+    gap: 15px; /* Increased gap for better spacing */
+    max-width: 70vh; /* Set maximum width to maintain a square */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.map-area {
+    background-color: #e0e0e0;
+    padding: 50px;
+    cursor: pointer;
+}
+
+/* Styles for the Inventory Management */
+.inventory-management {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.inventory-row {
+    display: flex;
+    gap: 10px;
+}
+
+.inventory-space {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the Stats Box */
+.stats-box {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Styles for the backpack box */
+.backpack-box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.backpack-items {
+    /* Styling for the backpack items */
+}
+
+.backpack-buttons {
+    /* Styling for the backpack buttons */
+}
+
+.backpack-item.selected,
+.inventory-item.selected {
+    background-color: lightblue;
+    /* Add any additional styling to indicate selection */
 }
