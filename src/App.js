@@ -76,16 +76,23 @@ const App = () => {
     };
 
     const mapInfo = [
-        { name: 'Area 1' },
-        { name: 'Area 2' },
-        { name: 'Area 3' },
-        { name: 'Area 4' },
+        { name: 'Area 1', bg: 'pink' },
+        { name: 'Area 2', bg: 'green' },
+        { name: 'Area 3', bg: 'yellow' },
+        { name: 'Area 4', bg: 'blue' },
         // Add more map information as needed
     ];
 
+    const [selectedAreaBg, setSelectedAreaBg] = useState(''); // State to hold selected area's background color
+
     const showInfo = (info) => {
-         // Logic to display information about the selected map area
-         console.log(`Showing information for area: ${info.name}`);
+        // Logic to display information about the selected map area
+        console.log(`Showing information for area: ${info.name}`);
+        setSelectedAreaBg(info.bg); // Set background color based on the selected area
+    };
+
+    const resetBackgroundColor = () => {
+        setSelectedAreaBg(''); // Reset background color to default
     };
 
     const [inventory, setInventory] = useState([]);
@@ -114,7 +121,7 @@ const App = () => {
     };
 
     return (
-        <div className="app">
+        <div className="app" style={{ background: selectedAreaBg }} >
             <div className="spell-book">
                 <h2>Spell Book</h2>
                 <div className="spell-list">
@@ -134,6 +141,9 @@ const App = () => {
                             {info.name}
                         </div>
                     ))}
+                </div>
+                <div className="reset-button">
+                    <button onClick={resetBackgroundColor}>Reset Background</button>
                 </div>
             </div>
 

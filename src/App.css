@@ -42,6 +42,15 @@
     cursor: pointer;
 }
 
+.map-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.world-map {
+    margin-bottom: 20px; /* Increase margin between map and button */
+}
+
 /* Styles for the Inventory Management */
 .inventory-management {
     position: fixed;
