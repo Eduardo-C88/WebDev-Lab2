@@ -185,8 +185,8 @@ const App = () => {
 
             <div className="stats-box">
                 <h2>Stats</h2>
-                <div>HP: {stats.hp}</div>
-                <div>Mana: {stats.mana}</div>
+                <div>HP: {stats.hp} / {maxStats.hp}</div>
+                <div>Mana: {stats.mana} / {maxStats.mana}</div>
                 <button onClick={resetStats}>Reset Stats</button>
             </div>
         </div>
