@@ -33,7 +33,6 @@ const App = () => {
         { name: 'Fireball', spellCost: 10 },
         { name: 'Heal', spellCost: 5 },
         { name: 'Blood Sacr.', spellCost: 10 },
-        // Add more spells as needed
     ];
 
     const castSpell = (spell) => {
@@ -57,6 +56,7 @@ const App = () => {
         if (spell.name === 'Heal') {
             const newHP = Math.min(stats.hp + 15, mStats.hp); // Increase HP by 20 but not beyond 100
             const newMana = Math.max(stats.mana - spell.spellCost, 0); // Deduct spell cost from mana
+
             setStats({ ...stats, hp: newHP, mana: newMana });
         } else if (spell.name === 'Blood Sacr.') {
             const newHP = Math.max(stats.hp - spell.spellCost, 20); // Lose 10 HP but not beyond 20
@@ -66,6 +66,7 @@ const App = () => {
         }else {
             // Reducing mana for other spells
             const newMana = Math.max(stats.mana - spell.spellCost, 0); // Deduct spell cost from mana
+
             setStats({ ...stats, mana: newMana });
         }
     };
@@ -80,7 +81,6 @@ const App = () => {
         { name: 'Area 2', bg: 'green' },
         { name: 'Area 3', bg: 'yellow' },
         { name: 'Area 4', bg: 'blue' },
-        // Add more map information as needed
     ];
 
     const [selectedAreaBg, setSelectedAreaBg] = useState(''); // State to hold selected area's background color
@@ -100,7 +100,6 @@ const App = () => {
         { name: 'Item 1' },
         { name: 'Item 2' },
         { name: 'Item 3' },
-        // Add more initial items in the backpack as needed
     ]);
     const [selectedItem, setSelectedItem] = useState(null);
 
